@@ -26,6 +26,7 @@ func NewParser(certBundle string, logger *logrus.Logger) *Parser {
 
 func (p *Parser) getCertificates() ([]x509.Certificate, error) {
 	f, err := os.Open(p.bundlePath)
+	defer f.Close()
 	if err != nil {
 		return nil, fmt.Errorf("unable to open certificate bundle file: %v", err)
 	}
