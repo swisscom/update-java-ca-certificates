@@ -34,6 +34,21 @@ Options:
 update-java-ca-certificates -c /etc/ssl/certs/ca-certificates.crt /etc/ssl/java/cacerts
 ```
 
+#### Result
+
+```
+keytool -list -keystore /etc/ssl/java/cacerts -storepass changeit
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 137 entries
+
+02ed0eb28c14da45165c566791700d6451d7fb56f0b2ab1d3b8eb070e56edff5, 6 Jan 2022, trustedCertEntry, 
+Certificate fingerprint (SHA-256): 02:ED:0E:B2:8C:14:DA:45:16:5C:56:67:91:70:0D:64:51:D7:FB:56:F0:B2:AB:1D:3B:8E:B0:70:E5:6E:DF:F5
+(...)
+```
+
 ## Building
 
 ### Requirements
