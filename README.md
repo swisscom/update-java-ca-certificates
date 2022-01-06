@@ -12,6 +12,42 @@ The issue that this tool is trying to solve is already solved by Arch Linux's
 have solved the issue (yet), thus this is a tool to help standardize the mess that's currently out there in terms
 of path standardization and ca-certificates location.
 
+## Usage
+
+```
+Usage: update-java-ca-certificates [--debug] [--force] [--certificate-bundle CERTIFICATE-BUNDLE] [--password PASSWORD] FILE
+
+Positional arguments:
+  FILE
+
+Options:
+  --debug, -D
+  --force, -f
+  --certificate-bundle CERTIFICATE-BUNDLE, -c CERTIFICATE-BUNDLE [default: /etc/ssl/certs/ca-certificates.crt]
+  --password PASSWORD, -p PASSWORD [default: changeit]
+  --help, -h             display this help and exit
+```
+
+### Example
+
+```
+update-java-ca-certificates -c /etc/ssl/certs/ca-certificates.crt /etc/ssl/java/cacerts
+```
+
+## Building
+
+### Requirements
+
+- Golang (1.17+)
+- Make
+
+### Steps
+
+```
+make
+./bin/update-java-ca-certificates -h
+```
+
 ## Paths
 
 This tool assumes the directories are set up according to what
