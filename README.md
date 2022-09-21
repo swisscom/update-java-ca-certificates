@@ -53,7 +53,7 @@ Certificate fingerprint (SHA-256): 02:ED:0E:B2:8C:14:DA:45:16:5C:56:67:91:70:0D:
 
 ### Requirements
 
-- Golang (1.17+)
+- Golang (1.19+)
 - Make
 
 ### Steps
